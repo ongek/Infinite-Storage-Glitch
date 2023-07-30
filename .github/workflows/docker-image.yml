@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: cd Infinite-Storage-Glitch && docker build -t isg . && docker run -it --rm -v ${PWD}:/home/Infinite-Storage-Glitch isg cargo build --release
+      run: docker build -t isg . && docker run -it --rm -v ${PWD}:/home/Infinite-Storage-Glitch isg cargo build --release
